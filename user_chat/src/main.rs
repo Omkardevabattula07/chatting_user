@@ -13,7 +13,7 @@ use actix_web::web;
 
 #[get("/greet/{name}")]
 async fn greet(name: web::Path<String>) -> impl Responder {
-    format!("Hello, {}!", name)
+    format!("Hello this is from the greetuser branch, {}!", name)
 }
 
 #[actix_web::main]
