@@ -1,30 +1,25 @@
-use actix_web::{get, App, HttpServer, Responder};
+ use actix_web::{App, HttpServer};
+ use actix_files as fs;
 
-#[get("/")]
-async fn index() -> impl Responder {
-    "Actix-web running from the  main  branch!"
-}
-#[get("/health")]
-async fn health() -> impl Responder {
-    "OK"
-}
 
-use actix_web::web;
+ mod handlers;
+ mod routes;
 
-#[get("/greet/{name}")]
-async fn greet(name: web::Path<String>) -> impl Responder {
-    format!("Hello this is from the greetuser branch, {}!", name)
-}
 
-#[actix_web::main]
-async fn main() -> std::io::Result<()> {
-    HttpServer::new(|| {
+ #[actix_web::main]
+
+ async fn main()-> std::io::Result<()>{
+
+
+    println!("Starting server at http://");
+    HttpServer::new(||{
+
+
         App::new()
-            .service(index)
-            .service(health)
-            .service(greet)
+        .service(fs::Files::new("/static", "./static").show_files_listing())
+        .configure(routes::config_routes)
     })
-    .bind(("127.0.0.1", 8080))?
+    .bind(("127.0.0.1",8080))?
     .run()
-    .await
-}
+    .await      
+ }
