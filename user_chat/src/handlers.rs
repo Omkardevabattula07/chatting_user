@@ -20,3 +20,14 @@ pub async fn login() -> Result <NamedFile> {
 pub async fn register() -> Result <NamedFile> {
     Ok(NamedFile::open("./static/register.html")?)
 }
+
+pub async fn superuser() -> Result <NamedFile> {
+    Ok(NamedFile::open("./static/superuser.html")?)
+}
+pub async fn users() -> Result <NamedFile> {
+    Ok(NamedFile::open("./static/users.html")?)
+}
+
+pub async fn ws_chat() -> Result <NamedFile> {
+    Ok(NamedFile::open("./static/ws_chat.html")?)
+}
