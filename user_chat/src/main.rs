@@ -2,7 +2,7 @@ use actix_web::{get, App, HttpServer, Responder};
 
 #[get("/")]
 async fn index() -> impl Responder {
-    "Actix-web running"
+    "Actix-web running from the  main  branch!"
 }
 #[get("/health")]
 async fn health() -> impl Responder {
