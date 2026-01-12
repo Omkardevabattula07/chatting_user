@@ -11,3 +11,12 @@ pub async fn index() -> Result<NamedFile>  {
 }
 
 
+pub async fn login() -> Result <NamedFile> {
+
+
+    Ok(NamedFile::open("./static/login.html")?)
+}
+
+pub async fn register() -> Result <NamedFile> {
+    Ok(NamedFile::open("./static/register.html")?)
+}

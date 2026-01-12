@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberAuth – System Registry</title>
+<link rel="stylesheet" href="/static/register.css">
+
+<style>
+
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+  <div class="title">SYSTEM_REGISTRY</div>
+  <div class="subtitle">INITIALIZE YOUR DIGITAL EXISTENCE</div>
+
+  <div class="top-row">
+    <div class="avatar">
+      <div class="avatar-ring"></div>
+      <div class="avatar-label">AVATAR MODULE</div>
+    </div>
+
+    <div>
+      <label>DIGITAL BIO</label>
+      <textarea class="textarea" placeholder="Describe your digital footprint..."></textarea>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <label>CODENAME</label>
+      <input class="input" placeholder="NEO_PROTOCOL">
+    </div>
+    <div>
+      <label>LOGIC GATE</label>
+      <select class="select">
+        <option disabled selected>Select Challenge...</option>
+        <option>What was your first system alias?</option>
+        <option>Name of your favorite fictional AI?</option>
+        <option>Which city did you first connect from?</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="full">
+    <label>CHALLENGE KEY</label>
+    <input class="input" placeholder="Your secret answer...">
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <label>ACCESS CIPHER</label>
+      <div class="password">
+        <input type="password" class="input">
+        <span onclick="toggle(this)">👁</span>
+      </div>
+    </div>
+    <div>
+      <label>SYNC CHECK</label>
+      <div class="password">
+        <input type="password" class="input">
+        <span onclick="toggle(this)">👁</span>
+      </div>
+    </div>
+  </div>
+
+  <button class="button">INITIATE_UPLINK →</button>
+
+  <div class="footer">
+    Already authenticated? <a href="/login">Access Login Port</a>
+  </div>
+</div>
+
+<script>
+function toggle(el) {
+  const input = el.previousElementSibling;
+  if (input.type === "password") {
+    input.type = "text";
+    el.textContent = "🙈";
+  } else {
+    input.type = "password";
+    el.textContent = "👁";
+  }
+}
+</script>
+
+</body>
+</html>

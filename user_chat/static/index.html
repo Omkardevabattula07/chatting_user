@@ -2,11 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Actix + Tor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | My Personal Site</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Actix-web on Tor</h1>
-    <p>This website is served by Rust, Actix-web, Docker, and Tor.</p>
+    <nav>
+        <a href="/" class="active">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+	<a href="/names" class="active">Names</a>	
+    </nav>
+
+    <main class="container">
+        <h1>Welcome to My Website</h1>
+        <p>This site is powered by <strong>Actix-web</strong> and <strong>Rust</strong>.</p>
+        <button id="greetBtn">Click for a Surprise</button>
+    </main>
+
+    <script src="/assets/script.js"></script>
 </body>
 </html>

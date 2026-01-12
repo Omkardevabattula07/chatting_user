@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CORE_ACCESS | Secure Interface</title>
+<link rel="stylesheet" href="/static/login.css">
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="panel">
+
+        <div class="header">
+            <div class="chip">⬡</div>
+            <h1>CORE_<span>ACCESS</span></h1>
+            <small>SECURE INTERFACE TERMINAL v4.0.2</small>
+        </div>
+
+        <div class="form-group">
+            <div class="label">NODE IDENTIFIER</div>
+            <div class="input-wrapper">
+                <input type="text" placeholder="Username / ID">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="label">ACCESS CIPHER</div>
+            <div class="input-wrapper">
+                <input type="password" id="password" placeholder="••••••••">
+                <span class="eye" id="eyePwd" onclick="toggleField('password','eyePwd')">👁</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="label" >
+                SECURITY CHALLENGE
+            </div>
+            <div class="input-wrapper">
+                <input type="password" id="security" placeholder="••••••••">
+                <span class="eye" id="eyeSec" onclick="toggleField('security','eyeSec')">👁</span>
+            </div>
+        </div>
+
+        <button>INITIATE_LOGIN</button>
+
+        <div class="footer">
+            <a href="#">FORGOT CIPHER?</a>
+            <a href="/register">REGISTER ACCESS</a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function toggleField(inputId, eyeId) {
+    const field = document.getElementById(inputId);
+    const eye = document.getElementById(eyeId);
+
+    if (field.type === "password") {
+        field.type = "text";
+        eye.textContent = "🙈";
+    } else {
+        field.type = "password";
+        eye.textContent = "👁";
+    }
+}
+</script>
+
+</body>
+</html>
